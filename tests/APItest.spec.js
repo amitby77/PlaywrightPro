@@ -11,3 +11,15 @@ test('Validate the GET response from the API',async({request})=>{
     const responseBody = await response.json()
     console.log(responseBody)
 })
+
+// @ts-check
+
+test('validate the API resposnes', async({request})=>{
+    const response = await request.get('https://reqres.in/api/users?page=2');
+    // Validate the status code
+    expect(response.status()).toBe(200);
+    // Validate the response body
+    const responseBody = await response.json();
+    expect(responseBody.page).toBe(2);
+    expect(responseBody.data.length).toBeGreaterThan(0);
+});

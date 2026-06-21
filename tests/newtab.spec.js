@@ -10,5 +10,5 @@ test('validate new tab page',async({page})=>{
         page.getByText('Meet ups').nth(0).click()
     ]) 
     console.log(await newTab.title())
-    expect(await newTab.title()).toBe('Software Testing Meetup 2025')
+    expect(await newTab.title()).toBe('QA Summit | Next Stop: Chennai — May 9, 2026 | Global Software Testing Conferences by Rahul Shetty')
 })

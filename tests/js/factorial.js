@@ -1,9 +1,10 @@
 function factorial(n){
-    let result =1;
-    for (let i=1 ; i<=n;i++){
-        result *= i
+    let result = 1;
+    for(let i=1; i<=n; i++){
+        result *= i;
     }
-    return result   
+    return result
 }
 
-console.log(factorial(5))
+
+console.log(factorial(5))s
