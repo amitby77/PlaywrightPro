@@ -27,7 +27,7 @@ await page2.goto('https://www.google.com/')
 // await expect(page2).toHaveTitle('Human Resources Management Software | HRMS | OrangeHRM')
 
 
-test.only('validate the multiple window functionality', async () => {
+test('validate the multiple window functionality', async () => {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page1 = await context.newPage();
@@ -40,7 +40,11 @@ test.only('validate the multiple window functionality', async () => {
     page1.getByRole('link', { name: 'OrangeHRM, Inc' }).click()
   ]);
 
+<<<<<<< HEAD
   await expect(page2).toHaveTitle('OrangeHRM: All in One HR Software for Businesses | OrangeHRM');
+=======
+  await expect(page2).toHaveTitle('OrangeHRM: All in One HR Software for Businesses | OrangeHRM'); //
+>>>>>>> e767760ac5decd1074ae52d1d72a6b40d419dbcc
   await expect(page2.locator("div[class='page-title']")).toContainText('Streamline All Your HR Needs on One ');
   console.log(await page2.locator('h1:visible').textContent());
   console.log("Multiple window handled successfully");
